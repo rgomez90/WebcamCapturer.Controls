@@ -7,7 +7,7 @@ using WebcamCapturer.Controls.Core;
 
 namespace WebcamCapturer.Controls.WinForms
 {
-    internal class WebcamCapturePresenter
+    public class WebcamCapturePresenter
     {
         private IWebcamCaptureView _view;
 

@@ -7,7 +7,7 @@ using AForge.Video.DirectShow;
 
 namespace WebcamCapturer.Controls.Core
 {
-    internal interface IWebcamCaptureView
+    public interface IWebcamCaptureView
     {
         event EventHandler<Image> SaveSnapShot;
         event EventHandler Disconnect;
