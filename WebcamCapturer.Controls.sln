@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer.Controls", "WebcamCapturer.Controls\WebcamCapturer.Controls.csproj", "{B920DC35-AB05-4A84-8171-F081C6DECB83}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F562285E-4229-4DA3-A519-7FA45CB93353}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer.Controls.WPF", "WebcamCapturer.Controls.WPF\WebcamCapturer.Controls.WPF.csproj", "{587F1ED7-445B-4367-AC2F-5F783FC8A65D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer.Controls.WinForms", "WebcamCapturer.Controls.WinForms\WebcamCapturer.Controls.WinForms.csproj", "{A142549D-7F63-4C66-862B-B4E2CD6956B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer.Core", "WebcamCapturer.Core\WebcamCapturer.Core.csproj", "{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B920DC35-AB05-4A84-8171-F081C6DECB83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B920DC35-AB05-4A84-8171-F081C6DECB83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B920DC35-AB05-4A84-8171-F081C6DECB83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B920DC35-AB05-4A84-8171-F081C6DECB83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{587F1ED7-445B-4367-AC2F-5F783FC8A65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{587F1ED7-445B-4367-AC2F-5F783FC8A65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{587F1ED7-445B-4367-AC2F-5F783FC8A65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{587F1ED7-445B-4367-AC2F-5F783FC8A65D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A142549D-7F63-4C66-862B-B4E2CD6956B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A142549D-7F63-4C66-862B-B4E2CD6956B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A142549D-7F63-4C66-862B-B4E2CD6956B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A142549D-7F63-4C66-862B-B4E2CD6956B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

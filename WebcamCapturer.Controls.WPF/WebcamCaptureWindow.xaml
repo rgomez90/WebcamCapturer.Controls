@@ -1,0 +1,27 @@
+﻿<Window x:Class="WebcamCapturer.Controls.WPF.WebcamCaptureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebcamCapturer.Controls.WPF"
+        mc:Ignorable="d"
+        Title="WebcamCaptureWindow" Height="450" Width="800">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="100" FlowDirection="RightToLeft">
+            <Button Content="Connect" Width="100" Click="OnBtnConnectClick"/>
+            <Button Content="Disconnect" Width="100" Click="OnBtnDisconnectClick"/>
+            <Button Content="SnapShot" Width="100" Click="OnBtnSnapShotClick"/>
+            <Button Content="Save" Width="100" Click="OnBtnSaveClick"/>
+            <ComboBox Name="CbVideoDevices" Width="100" ItemsSource="{Binding VideoDevices, Mode=OneWay}" SelectionChanged="OnCbVideoDevicesSelectionChanged"/>
+            <ComboBox Name="CbResolutions" Width="100" ItemsSource="{Binding SupportedFrameSizes, Mode=OneWay}" SelectionChanged="OnCbResolutionsSelectionChanged"/>
+        </StackPanel>
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Name="ImgActualImage" Grid.Column="0" Margin="0,0,5,0" Stretch="Uniform" />
+            <Image Name="ImgSnapShotImage" Grid.Column="1" Margin="5,0,0,0"  Stretch="Uniform" />
+        </Grid>
+    </DockPanel>
+</Window>

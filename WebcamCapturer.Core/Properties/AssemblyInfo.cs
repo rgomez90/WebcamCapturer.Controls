@@ -1,16 +1,17 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebcamCapturer.Controls")]
-[assembly: AssemblyDescription("Controls to capture from a webcam in .NET")]
-[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyTitle("WebcamCapturer.Core")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebcamCapturer.Controls")]
-[assembly: AssemblyCopyright("Copyright ©  2018 - Rafael Gomez")]
+[assembly: AssemblyProduct("WebcamCapturer.Core")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -18,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b920dc35-ab05-4a84-8171-f081c6decb83")]
+[assembly: Guid("9f150c85-3145-4e42-8f20-fcaab4a6b7c3")]
 
 // Version information for an assembly consists of the following four values:
 //
