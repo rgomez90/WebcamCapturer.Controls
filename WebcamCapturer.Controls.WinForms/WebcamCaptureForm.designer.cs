@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.videoSourcePlayer = new AForge.Controls.VideoSourcePlayer();
+            this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.CbVideoResolution = new System.Windows.Forms.ComboBox();
             this.BtnConnect = new System.Windows.Forms.Button();
@@ -40,6 +40,9 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.PbCamImage = new System.Windows.Forms.PictureBox();
+            this.bindingSourceVideoSources = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceResolutions = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -49,21 +52,14 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbCamImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVideoSources)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceResolutions)).BeginInit();
             this.SuspendLayout();
-            // 
-            // videoSourcePlayer
-            // 
-            this.videoSourcePlayer.BorderColor = System.Drawing.Color.Transparent;
-            this.videoSourcePlayer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.videoSourcePlayer.Location = new System.Drawing.Point(0, 0);
-            this.videoSourcePlayer.Name = "videoSourcePlayer";
-            this.videoSourcePlayer.Size = new System.Drawing.Size(490, 523);
-            this.videoSourcePlayer.TabIndex = 0;
-            this.videoSourcePlayer.Text = "videoSourcePlayer";
-            this.videoSourcePlayer.VideoSource = null;
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.bindingSourceVideoSources;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(15, 47);
             this.comboBox1.Name = "comboBox1";
@@ -72,6 +68,7 @@
             // 
             // CbVideoResolution
             // 
+            this.CbVideoResolution.DataSource = this.bindingSourceResolutions;
             this.CbVideoResolution.FormattingEnabled = true;
             this.CbVideoResolution.Location = new System.Drawing.Point(266, 47);
             this.CbVideoResolution.Name = "CbVideoResolution";
@@ -178,7 +175,7 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.videoSourcePlayer);
+            this.splitContainer2.Panel1.Controls.Add(this.PbCamImage);
             // 
             // splitContainer2.Panel2
             // 
@@ -187,13 +184,23 @@
             this.splitContainer2.SplitterDistance = 492;
             this.splitContainer2.TabIndex = 0;
             // 
-            // Form1
+            // PbCamImage
+            // 
+            this.PbCamImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PbCamImage.Location = new System.Drawing.Point(0, 0);
+            this.PbCamImage.Name = "PbCamImage";
+            this.PbCamImage.Size = new System.Drawing.Size(490, 523);
+            this.PbCamImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbCamImage.TabIndex = 10;
+            this.PbCamImage.TabStop = false;
+            // 
+            // WebcamCaptureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 620);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
+            this.Name = "WebcamCaptureForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -205,13 +212,15 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PbCamImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVideoSources)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceResolutions)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private AForge.Controls.VideoSourcePlayer videoSourcePlayer;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox CbVideoResolution;
         private System.Windows.Forms.Button BtnConnect;
@@ -223,6 +232,9 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.PictureBox PbCamImage;
+        private System.Windows.Forms.BindingSource bindingSourceVideoSources;
+        private System.Windows.Forms.BindingSource bindingSourceResolutions;
     }
 }
 
