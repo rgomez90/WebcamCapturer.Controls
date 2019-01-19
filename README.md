@@ -4,7 +4,7 @@ Provide some controls for WinForms and WPF to show/record/snapshot video from a 
 
 ## Installation
 
-Download [latest release]() or download source and build it yourself!
+Install using Nuget `Install-Package WebcamCapturer.Controls` or download [latest release]() build it yourself!
 
 ## Usage
 
