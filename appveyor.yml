@@ -49,7 +49,7 @@ build:
 build_script:
  - cmd : msbuild "WebcamCapturer.Controls.WPF\WebcamCapturer.Controls.WPF.csproj" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
  - cmd : msbuild "WebcamCapturer.Controls.WinForms\WebcamCapturer.Controls.WinForms.csproj" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
- - cmd : msbuild /t:pack "WebcamCapturer.Core\WebcamCapturer.Core.csproj" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
+ - cmd : msbuild /t:pack "WebcamCapturer.Core\WebcamCapturer.Core.csproj" /p:PackageOutputPath="." -p:Authors=tester /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
 
 after_build:
   - cmd: cd %APPVEYOR_BUILD_FOLDER%
