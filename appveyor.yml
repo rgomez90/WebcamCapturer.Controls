@@ -20,7 +20,7 @@ init:
   - cmd: echo %APPVEYOR_BUILD_FOLDER%
 
 artifacts:
-  - path: '**\WebcamCapturer.*.dll'
+  - path: '**\bin\Release\WebcamCapturer.*.dll'
 
 install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
