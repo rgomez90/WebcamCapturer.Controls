@@ -19,7 +19,7 @@ init:
   - cmd: echo %APPVEYOR_REPO_TAG_NAME%
 
 artifacts:
-  - path: bin\$(configuration)\*.dll
+  - path: %APPVEYOR_BUILD_FOLDER%\bin\$(configuration)\*.dll
 
 install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
