@@ -1,6 +1,8 @@
 environment:
   VERSION: 1.1
 
+version: $(VERSION).{build}
+
 pull_requests:
   do_not_increment_build_number: true
 
@@ -18,9 +20,11 @@ init:
   - cmd: echo %APPVEYOR_BUILD_VERSION%
   - cmd: echo %APPVEYOR_REPO_TAG_NAME%
   - cmd: echo %APPVEYOR_BUILD_FOLDER%
+  - cmd: echo %APPVEYOR_PROJECT_NAME%
 
 artifacts:
   - path: '**\bin\Release\WebcamCapturer.*.dll'
+  - path: '**\*.nupkg'
 
 install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
@@ -38,10 +42,13 @@ nuget:
 before_build:
 - cmd: nuget restore
 
-build:
-  publish_nuget: true
-  include_nuget_references: true
-  verbosity: minimal
+build_script:
+ - cmd: msbuild "WebcamCapturer.Controls.WPF\WebcamCapturer.Controls.WPF.csproj" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
+ - cmd: msbuild "WebcamCapturer.Controls.WinForms\WebcamCapturer.Controls.WinForms.csproj" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
+ - cmd: msbuild /t:pack "WebcamCapturer.Core\WebcamCapturer.Core.csproj" /p:PackageOutputPath="." -p:Authors=tester /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:GeneratePackageOnBuild=false
+ - cmd: nuget pack "WebcamCapturer.Core\WebcamCapturer.Core.csproj" -Properties "Configuration=Release;Platform=AnyCPU" -IncludeReferencedProjects 
+ - cmd: nuget pack "WebcamCapturer.Controls.WPF\WebcamCapturer.Controls.WPF.csproj" -Properties "Configuration=Release;Platform=AnyCPU" -IncludeReferencedProjects 
+ - cmd: nuget pack "WebcamCapturer.Controls.WinForms\WebcamCapturer.Controls.WinForms.csproj" -Properties "Configuration=Release;Platform=AnyCPU" -IncludeReferencedProjects 
 
 after_build:
   - cmd: cd %APPVEYOR_BUILD_FOLDER%

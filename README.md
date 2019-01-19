@@ -13,7 +13,7 @@ If you also want to use the built-in control, you also need to install:
 
 ## Usage
 
-For now the library exposes an `IWebcamCapturerView` interface and a `WebcamCapturerPresenter`.
+For now the library exposes an `IWebcamCapturerView` interface and a `WebcamCapturerPresenter`, both reside in `WebcamCapturer.Core`.
 
 If you use the built-in controls, instantiate a `new WebcamCapturerPresenter`,  inject the correct view (Winforms or WPF) to the presenter.
 

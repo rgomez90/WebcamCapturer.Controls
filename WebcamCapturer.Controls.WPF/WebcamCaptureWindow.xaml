@@ -7,20 +7,28 @@
         mc:Ignorable="d"
         Title="WebcamCaptureWindow" Height="450" Width="800">
     <DockPanel Margin="10">
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="100" FlowDirection="RightToLeft">
-            <Button Content="Connect" Width="100" Click="OnBtnConnectClick"/>
-            <Button Content="Disconnect" Width="100" Click="OnBtnDisconnectClick"/>
-            <Button Content="SnapShot" Width="100" Click="OnBtnSnapShotClick"/>
-            <Button Content="Save" Width="100" Click="OnBtnSaveClick"/>
-            <ComboBox Name="CbVideoDevices" Width="100" ItemsSource="{Binding VideoDevices, Mode=OneWay}" SelectionChanged="OnCbVideoDevicesSelectionChanged"/>
-            <ComboBox Name="CbResolutions" Width="100" ItemsSource="{Binding SupportedFrameSizes, Mode=OneWay}" SelectionChanged="OnCbResolutionsSelectionChanged"/>
-        </StackPanel>
+        <Canvas DockPanel.Dock="Top" Height="100" FlowDirection="RightToLeft" >
+            <Button Content="Connect" Width="100" 
+                    Click="OnBtnConnectClick" Canvas.Left="130" Canvas.Top="20"/>
+            <Button Content="Disconnect" Width="100" 
+                    Click="OnBtnDisconnectClick" Canvas.Left="130" Canvas.Top="60"/>
+            <Button Content="SnapShot" Width="100"
+                    Click="OnBtnSnapShotClick" Canvas.Left="10" Canvas.Top="20"/>
+            <Button Content="Save" Width="100"
+                    Click="OnBtnSaveClick" Canvas.Left="10" Canvas.Top="60"/>
+            <ComboBox Name="CbVideoDevices" Width="120" 
+                      ItemsSource="{Binding VideoDevices, Mode=OneWay}"
+                      SelectionChanged="OnCbVideoDevicesSelectionChanged" Canvas.Left="474" Canvas.Top="56"/>
+            <ComboBox Name="CbResolutions" Width="145"
+                      ItemsSource="{Binding SupportedFrameSizes, Mode=OneWay}"
+                      SelectionChanged="OnCbResolutionsSelectionChanged" Canvas.Left="619" Canvas.Top="56"/>
+        </Canvas>
         <Grid Margin="0,10,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image Name="ImgActualImage" Grid.Column="0" Margin="0,0,5,0" Stretch="Uniform" />
+            <Image Name="ImgActualImage" Grid.Column="0"  Margin="0,0,5,0" Stretch="Uniform" />
             <Image Name="ImgSnapShotImage" Grid.Column="1" Margin="5,0,0,0"  Stretch="Uniform" />
         </Grid>
     </DockPanel>
