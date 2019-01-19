@@ -1,5 +1,5 @@
 environment:
-  VERSION: 1.0
+  VERSION: 1.1
 
 pull_requests:
   do_not_increment_build_number: true
@@ -17,6 +17,9 @@ init:
   - cmd: echo %APPVEYOR_BUILD_NUMBER%
   - cmd: echo %APPVEYOR_BUILD_VERSION%
   - cmd: echo %APPVEYOR_REPO_TAG_NAME%
+
+artifacts:
+  -path: bin\$(configuration)\*.dll
 
 install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
