@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WebcamCapturer.Controls.WinForms")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyDescription("Simple Control to capture from a webcam in WinForms")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCompany("Rafael Gomez")]
 [assembly: AssemblyProduct("WebcamCapturer.Controls.WinForms")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
