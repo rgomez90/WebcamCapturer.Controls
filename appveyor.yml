@@ -17,9 +17,12 @@ init:
   - cmd: echo %APPVEYOR_BUILD_NUMBER%
   - cmd: echo %APPVEYOR_BUILD_VERSION%
   - cmd: echo %APPVEYOR_REPO_TAG_NAME%
+  - cmd: echo %APPVEYOR_BUILD_FOLDER%
+  - cmd: cd %APPVEYOR_BUILD_FOLDER%
+  - cmd: ls
 
 artifacts:
-  - path: $(APPVEYOR_BUILD_FOLDER)\bin\$(configuration)\*.dll
+  - path: '**\*.dll'
 
 install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
@@ -40,6 +43,10 @@ before_build:
 build:
   publish_nuget: true
   verbosity: minimal
+
+after_build:
+  - cmd: cd %APPVEYOR_BUILD_FOLDER%
+  - cmd: ls
 
 deploy:
 - provider: NuGet
