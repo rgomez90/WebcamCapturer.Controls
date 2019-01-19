@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/rgomez90/WebcamCapturer.Controls/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/rgomez90/WebcamCapturer.Controls</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>First Release WPF.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>winForms webcam capture WPF</tags>
+  </metadata>
+</package>

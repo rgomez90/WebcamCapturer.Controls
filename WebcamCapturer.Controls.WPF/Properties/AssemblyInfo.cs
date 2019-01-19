@@ -6,11 +6,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WebcamCapturer.Controls.WPF")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyDescription("Simple Control to capture from a webcam in WPF")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCompany("Rafael Gomez")]
 [assembly: AssemblyProduct("WebcamCapturer.Controls.WPF")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
