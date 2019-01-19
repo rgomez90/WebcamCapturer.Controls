@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/rgomez90/WebcamCapturer.Controls</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>First Release WPF.</releaseNotes>
+    <releaseNotes>First Release</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>winForms webcam capture WPF</tags>
   </metadata>
