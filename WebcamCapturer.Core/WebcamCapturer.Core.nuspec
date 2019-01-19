@@ -13,5 +13,8 @@
     <releaseNotes>First Release</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>winForms webcam capture WPF</tags>
+	<dependencies>
+	  <dependency id="AForge.Video.DirectShow" version="2.2.5" />
+	</dependencies>
   </metadata>
 </package>
