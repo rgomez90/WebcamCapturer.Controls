@@ -81,9 +81,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebcamCapturer.Core\WebcamCapturer.Core.csproj">
-      <Project>{9f150c85-3145-4e42-8f20-fcaab4a6b7c3}</Project>
-      <Name>WebcamCapturer.Core</Name>
+    <ProjectReference Include="..\WebcamCapturer\WebcamCapturer.csproj">
+      <Project>{12f6a038-1461-4205-ac96-6e87475068e3}</Project>
+      <Name>WebcamCapturer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

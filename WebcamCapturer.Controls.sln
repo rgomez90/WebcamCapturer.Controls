@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2050
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F562285E-4229-4DA3-A519-7FA45CB93353}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer.Controls.WinForms", "WebcamCapturer.Controls.WinForms\WebcamCapturer.Controls.WinForms.csproj", "{A142549D-7F63-4C66-862B-B4E2CD6956B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer.Core", "WebcamCapturer.Core\WebcamCapturer.Core.csproj", "{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamCapturer", "WebcamCapturer\WebcamCapturer.csproj", "{12F6A038-1461-4205-AC96-6E87475068E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F150C85-3145-4E42-8F20-FCAAB4A6B7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F6A038-1461-4205-AC96-6E87475068E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F6A038-1461-4205-AC96-6E87475068E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F6A038-1461-4205-AC96-6E87475068E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F6A038-1461-4205-AC96-6E87475068E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
