@@ -31,7 +31,7 @@ presenter.Show();
 ### WPF
 
 ```csharp
-var view = new WebcamCapturerWindow()
-var presenter = new WebcamCapturePresenter(view);
-presenter.Show();
+ var view = new WebcamCaptureWindow();
+ new WebcamCapturePresenter(view);
+ view.Show();
 ```
